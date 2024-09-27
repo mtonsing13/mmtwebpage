@@ -1,0 +1,1 @@
+document.getElementById("demo").innerHTML = "This text was changed by JavaScript!";
