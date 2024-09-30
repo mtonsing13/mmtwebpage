@@ -17,6 +17,39 @@
         height: 100vh; /* Full screen height */
         margin: 0; /* Remove default margins */
     }
+    /* create the table of contents image */
+    .paper {
+      background-image: url('purplepink.jpg'); /* Replace with your crumpled paper image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 40px;
+      width: 80%;
+      max-width: 600px;
+      min-height: 300px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Optional shadow effect */
+      border-radius: 10px; /* Rounded corners */
+      color: #333; /* Text color */
+      text-align: center; /* Center the content */
+    }
+    /* Table of Contents Links */
+    .table-of-contents ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .table-of-contents li {
+      margin: 15px 0;
+    }
+    .table-of-contents a {
+      text-decoration: none;
+      font-size: 1.2em;
+      color: #000;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .table-of-contents a:hover {
+      color: #3498db; /* Change color on hover */
+    }
   </style>
   <style>
     /* Styling for the image in the top-left corner */
@@ -39,6 +72,19 @@
   <h1>MMT</h1>
   <p id="demo">Table of Contents!</p>
   <h2>are you here</h2>
+
+  <div class="paper"></div>
+    <h1>Table of Contents</h1>
+    <div class="table-of-contents">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+  </div>
   
   <!--<script src="script.js"></script> -->
 </body>
