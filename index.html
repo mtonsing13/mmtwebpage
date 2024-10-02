@@ -16,6 +16,12 @@
         background-repeat: no-repeat; /* Prevent the image from repeating */
         height: 100vh; /* Full screen height */
         margin: 0; /* Remove default margins */
+        /*added because was not centered*/
+        display: flex; /* Enables flexbox for centering */
+        justify-content: center; /* Centers content horizontally */
+        align-items: center; /* Centers content vertically */
+        font-family: 'Arial', sans-serif;
+
     }
     /* create the table of contents image */
     .paper {
@@ -31,11 +37,20 @@
       border-radius: 10px; /* Rounded corners */
       color: #333; /* Text color */
       text-align: center; /* Center the content */
+      /*added to fix tableofcontents page */
+      display: flex; /* Flexbox inside to align content */
+      flex-direction: column;
+      justify-content: center; /* Center vertically */
+      align-items: center; /* Center horizontally */
+      position: relative; /* Positioning for internal content */
+
     }
     /* Table of Contents Links */
     .table-of-contents ul {
       list-style-type: none;
       padding: 0;
+      /*added to fix tc*/
+      margin: 0;
     }
     .table-of-contents li {
       margin: 15px 0;
