@@ -23,7 +23,7 @@
     }
     /* Container for the table of contents */
     .content-container { /* ADDED THIS */
-        background-image: url('crumblepink copy.jpg'); /* Pink crumple paper image */
+        background-image: url("attempt1.png"); /* Pink crumple paper image */
         background-size: contain; /* ADDED THIS */
         background-position: center; /* ADDED THIS */
         background-repeat: no-repeat; /* ADDED THIS */
@@ -35,6 +35,13 @@
         /*padding: 20px; /* ADDED THIS */
         /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ADDED THIS */
         /*border-radius: 10px; /* ADDED THIS */
+    }
+    .table-of-contents h2 {
+      font-size: 2em;      /* Make the heading larger */
+      font-weight: bold;   /* Make the heading bold */
+      color: #000;         /* Set the color */
+      text-align: center;  /* Center the heading */
+      margin-bottom: 20px; /* Add some space below the heading */
     }
     /* Table of Contents Links */
     .table-of-contents ul {
@@ -59,32 +66,56 @@
     /* Styling for the image in the top-left corner */
     .top-left-image {
       position: absolute;
-      top: 10px;
-      left: 10px;
-      width: 150px;
+      top: 1px;
+      left: 1px;
+      width: 300px;
       height: auto;
     }
+    .date {
+      position: absolute;
+      top: 25%; /* 1/4 of the page from the top */
+      left: 10px; /* Align to the left with some padding */
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    /* Basic styling for the booklet */
+
   </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Table Of Contents</title>
 </head>
 <body>
+  <div class="date">
+    <!-- This will hold the formatted date -->
+    Today's Date: <span id="current-date"></span>
+  </div>
+  <a href="index.html">
+    <img src="cutoutinitials.png" alt="Logo" class="top-left-image">
+  </a>
    <!-- Image in the top-left corner -->
-   <img src="file.png" alt="Logo" class="top-left-image">
 
    <!-- table of contents back image -->
    <div class="content-container"> <!-- ADDED THIS -->
     <div class="table-of-contents">
+      <h2>Table of Contents</h2>
         <ul>
-            <li><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
-            <li><a href="#section3">Section 3</a></li>
+            <li><a href="index.html">Home................pg 1</a></li>
+            <li><a href="aboutme.html">About Me.........pg 2</a></li>
+            <li><a href="projects">Projects..........pg 3</a></li>
         </ul>
     </div>
 </div>
+<script>
+  // JavaScript to display the current date in the format: Month Day, Year (e.g., October 17, 2024)
+  function formatDate() {
+    const date = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
+  }
 
-  
-  <!--<script src="script.js"></script> -->
+  // Insert the formatted date into the HTML element
+  document.getElementById('current-date').textContent = formatDate();
+</script>
 </body>
 </html>
