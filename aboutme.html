@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    html, body {
+        height: 100%;
+        margin: 0; /* Remove default margins */
+    }
+    /* Set the background image for the whole body */
+    .date {
+      position: absolute;
+      top: 25%; /* 1/4 of the page from the top */
+      left: 10px; /* Align to the left with some padding */
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+        /* Styling for the image in the top-left corner */
+    .top-left-image {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 200px;
+      height: auto;
+      max-width:100%;
+    }
+    .top-section {
+      height: 15%; /* 1/4 of the page */
+      background-image: url('https://images.pexels.com/photos/13031765/pexels-photo-13031765.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Homepage background image */
+      background-size: cover;
+      background-position: center;
+    }
+    .bottom-section {
+      height: 85%; /* Remaining 3/4 of the page */
+      background-image: url('crumblepink.jpg'); /* Pink crumple paper image */
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body>
+    <div class="top-section">
+        <a href="index.html">
+            <img src="cutoutinitials.png" alt="Logo" class="top-left-image">
+        </a>
+        <div class="date">
+            <!-- This will hold the formatted date -->
+            <span id="current-date"></span>
+          </div>
+    </div>
+    <div class="bottom-section">
+        <!-- Additional content can go here -->
+    </div>
+   <!-- Image in the top-left corner -->
+
+   <!-- table of contents back image -->
+<script>
+  // JavaScript to display the current date in the format: Month Day, Year (e.g., October 17, 2024)
+  function formatDate() {
+    const date = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
+  }
+
+  // Insert the formatted date into the HTML element
+  document.getElementById('current-date').textContent = formatDate();
+</script>
+</body>
+</html>
